@@ -1,0 +1,78 @@
+/** overhead navigation **/
+
+
+header img {
+    height: 12vh;
+    left: 0;
+}
+
+header li {
+    padding: 6vw;
+    display: block;
+    margin:-5vw;
+    background-color:rgb(3, 9, 47);
+}
+
+#navigation {
+    display: none;
+    width: 100vw;
+}
+nav a {
+    color:rgb(255, 255, 255);
+    font-family: 'Something Wild';
+    font-size: 5vw;
+}
+
+li.img {
+    display: none;
+}
+header {
+    padding: 1vh;
+    position: fixed;
+    display: block;
+    height: 12vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color:rgb(9, 22, 98);
+    box-shadow: 0px 0px 10px 10px rgb(0, 0, 0);
+}
+header * {
+    display: inline;
+}
+
+a.active-page {
+    color:rgb(235, 111, 111);
+}
+
+.bar1, .bar2, .bar3 {
+    display: block;
+    width: 6vh;
+    border-radius: 1vh;
+    height: 1vh;
+    background-color: rgb(255, 255, 255);
+    margin: 1.5vh 0;
+    margin-top: 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    transform: translate(0, 4vw) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -4vw) rotate(45deg);
+  }
+
+ .menu-container {
+    cursor: pointer;
+    height: 12vh;
+    padding: 3vh;
+    padding-right: 0;
+    width: 12vh;
+    z-index: 2;
+    float: right;
+}

@@ -1,0 +1,552 @@
+@font-face {
+    font-family: 'Something Wild';
+    src: url("fonts/somethingwild-Regular.ttf");
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    background-image: linear-gradient(rgb(18, 3, 56),rgb(9, 22, 98));
+    text-align: center;
+    font-family: 'Patrick Hand';
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+* {
+    box-sizing: border-box;
+   
+}
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    gap: 5%;
+}
+
+/** homepage **/
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 12vw;
+  height: 12vw;
+  margin: -6vw 0 0 -6vw;
+  background-image: url("images/flowers-01.svg");
+  background-size: contain;
+  animation: spin 2s linear infinite;
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#home-container {
+    display: none;
+    flex-direction: column;
+    animation: appear 2s;
+}
+
+.home-here {
+    transform: translateX(0vw);
+}
+@keyframes appear { 
+    from{opacity:0 } 
+    to{opacity:1 }
+  }
+
+#name {
+    background: url("images/portfolio-name.svg") no-repeat;
+    width: 70%;
+    height: 70%;
+}
+
+.contains-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    background: rgba(255,255,255,0) url("images/flowers-01.svg") no-repeat;
+    background-size: contain;
+    width: 12vw;
+    height: 12vw;
+}
+
+.button:hover {
+    -webkit-filter: drop-shadow(0px 0px 45px rgb(255, 255, 255));
+    filter: drop-shadow(5px 5px 50px rgb(255, 255, 255));
+    transition: all 0.5s;
+    
+}
+
+.home-gone {
+    transform: translateX(-100vw);
+    transition: all 2s;
+}
+
+/** landing navigation **/
+
+#nav-container {
+    gap: 10vw;
+    transform: 100vw;
+    width: 90vw;
+}
+
+.nav-item {
+    flex-direction: column;
+    gap: 0%;
+    width: 60vw;
+    height: 80vh;
+    
+}
+
+.flower a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-family: 'Something Wild';
+    font-size: 10vh;
+    color:rgb(18, 3, 56);
+    line-height: 6vh;
+}
+
+.flower a:active {
+    color:rgb(235, 111, 111);
+}
+.up {
+    transform: translateY(100vh);
+}
+
+.down {
+    transform: translateY(-200vh);
+}
+
+.up-appear {
+    transform: translateY(0vh);
+    margin-top: auto;
+    transition: all 2s;
+}
+
+.down-appear {
+    margin-bottom: auto;
+    transform: translateY(0vh);
+    transition: all 2s;
+}
+.flower {
+    height: 70%;
+    width: 100%;
+    position: relative;
+    background-size: contain;
+}
+
+#flower1 {
+    background: url("images/flowers-01.svg") no-repeat;
+}
+
+#flower2 {
+    background: url("images/flowers-02.svg") no-repeat;
+}
+
+#flower3 {
+    background: url("images/flowers-03.svg") no-repeat;
+}
+
+.flower:hover {
+    cursor: pointer;
+    transform: rotate(45deg);
+    transition: all 1s;
+}
+
+.stem {
+    height: 70%;
+    width: 60%;
+    background-size: contain;
+}
+
+#stem1 {
+    background: url("images/stems-01.svg") no-repeat;
+}
+
+#stem2 {
+    background: url("images/stems-02.svg") no-repeat;
+}
+
+#stem3 {
+    background: url("images/stems-03.svg") no-repeat;
+}
+
+#stem4 {
+    background: url("images/stems-04.svg") no-repeat;
+}
+
+#stem5 {
+    background: url("images/stems-05.svg") no-repeat;
+}
+
+.nav-arrive {
+    animation: moveInRight 2s ease-in-out 1; 
+}
+
+/**mobile navigation **/
+.menu-container {
+    display: none;
+}
+/** overhead navigation **/
+header img {
+    height: 12vh;
+    left: 0;
+}
+
+header li {
+    margin: 2vw;
+    padding: 2vw;
+}
+
+
+nav a {
+    color:rgb(255, 255, 255);
+    font-family: 'Something Wild';
+    font-size: 5vw;
+}
+
+li img {
+    height: 3vw;
+}
+header {
+    padding: 1vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color:rgb(9, 22, 98);
+    box-shadow: 0px 0px 10px 10px rgb(0, 0, 0);
+}
+header * {
+    display: inline;
+}
+
+a.active-page {
+    color:rgb(235, 111, 111);
+}
+/**illustrations**/
+.row {
+    margin-top: 15vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    gap: 5vh;
+}
+
+#art-body {
+    overflow: visible;
+}
+
+.imagecard {
+    margin-top: 5vh;
+    background-color: transparent;
+    height: 50vw;
+    perspective: 1000px; 
+}
+
+.imagecard img {
+    width: 100%;
+    border-radius: 1em;
+}
+
+.portrait {
+    width: 40vw;
+}
+
+.landscape {
+    width: 80vw;
+}
+  
+.imagecard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+.imagecard.flip .imagecard-inner{
+    transform: rotateY(180deg);
+}
+  
+.imagecard-front, .imagecard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1em;
+}
+
+.imagecard-back {
+    background-image:linear-gradient( rgb(235, 111, 111), rgb(235, 167, 167));
+    color: rgb(18, 3, 56);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2vw;
+    line-height: 0vw;
+}
+
+.imagecard-back h1 {
+    font-family: 'Something Wild';
+    font-size: 6vw;
+    font-weight: lighter;
+    line-height: 5vw;
+    margin-top: 0;
+}
+/**projects**/
+#projects-body {
+    overflow: visible;
+}
+
+input[type='checkbox'] { 
+    display: none; 
+} 
+.project-section { 
+    margin-top: 10vh;
+} 
+
+#first {
+    margin-top: 20vh;
+}
+
+.lbl-toggle { 
+    display: block; 
+    font-family: 'Something Wild'; 
+    font-size: 8vw; 
+    text-transform: uppercase; 
+    text-align: center; padding: 1rem;
+    color: rgb(255, 255, 255); 
+    box-shadow: 0px 0px 10px 10px rgb(18, 3, 56);
+    background-color:rgb(8, 75, 111);
+    cursor: pointer; 
+    transition: all 0.25s ease-out; 
+} 
+
+.lbl-toggle:hover { 
+    background-color: rgb(235, 111, 111);
+} 
+
+.lbl-toggle::before { 
+    content: ' '; 
+    display: inline-block; 
+    border-top: 2vw solid transparent; 
+    border-bottom: 2vw solid transparent; 
+    border-left: 2vw solid currentColor; 
+    vertical-align: middle;
+    margin-right: 2vw;
+    transform: translateY(-2px); 
+    transition: transform .2s ease-out; 
+} 
+.toggle:checked+.lbl-toggle::before { 
+    transform: rotate(90deg) translateX(-3px); 
+} 
+.collapsible-content { 
+    max-height: 0px; 
+    overflow: hidden; 
+    transition: max-height .25s 
+    ease-in-out; 
+    background: rgb(255, 255, 255); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.toggle:checked + .lbl-toggle + .collapsible-content { 
+    max-height: 1000vh; 
+    
+} 
+ .collapsible-content .content-inner { 
+    background: rgb(255, 255, 255); 
+    font-size: 2vw;
+    padding: .5rem 1rem; 
+    max-width: 90%;
+    margin-bottom: 10vh;
+} 
+.collapsible-content p {
+    margin-bottom: 0; 
+}
+
+.collapsible-content img {
+    max-width: 60%;
+}
+
+iframe {
+    width: 52vw;
+    height: 30vw;
+}
+
+
+.project-button {
+    padding: 2vw 0vw;;
+    font-size:3vw;
+    max-width: 35%;
+    color:rgb(255, 255, 255);
+    display: block;
+    margin: auto;
+    border-radius: 1vw;
+    background-color:rgb(8, 75, 111);
+}
+
+.project-button:hover {
+    background-color:rgb(235, 111, 111);
+    transition: all 0.5s;
+}
+/** about **/
+#about-img {
+    position: relative;
+    left: -5vw;
+    margin-top: 10vw;
+    background-image: url("images/selfportrait.png");
+    height: 70vh;
+    width: 50vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#about-body {
+    overflow-y: visible;
+}
+
+#about-blurb {
+    position: relative;
+    left: 10vw;
+    background-image: url("images/blurb.svg");
+    margin-top: 20vh;
+    height: 74vh;
+    width: 60vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#about-blurb span {
+    font-family: 'Something Wild';
+    font-size: 8vw;
+}
+#about-text {
+    margin-top: -2vh;
+    padding: 0vw 10vw 10vw 10vw;
+    max-width: 50vw;
+    font-size: 2.4vw;
+}
+/** animations **/
+
+@keyframes moveOutLeft {
+    0% {
+        transform: translatex(0vw);
+    }
+	100% {
+		transform: translatex(-100vw);
+	}
+}
+
+@keyframes moveInRight {
+    0% {
+        transform: translatex(100vw);
+    }
+    
+	100% {
+		transform: translatex(0vw);
+	}
+}
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 912px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+      padding: 5vw;
+    }
+    .portrait, .landscape {
+        width: 90vw;
+    }
+    .portrait {
+        height: 54vh;
+    }
+
+    header {
+        display: block;
+        text-align: left;
+    }
+
+
+
+    #navigation {
+        display: none;
+    }
+
+    .bar1, .bar2, .bar3 {
+        display: block;
+        width: 6vh;
+        border-radius: 1vh;
+        height: 1vh;
+        background-color: rgb(255, 255, 255);
+        margin: 1.5vh 0;
+        margin-top: 0;
+        transition: 0.4s;
+      }
+
+      .change .bar1 {
+        transform: translate(0, 4vw) rotate(-45deg);
+      }
+      
+      .change .bar2 {opacity: 0;}
+      
+      .change .bar3 {
+        transform: translate(0, -4vw) rotate(45deg);
+      }
+      nav a {
+        font-size: 7vw;
+    }
+    
+     .menu-container {
+        display: block;
+        cursor: pointer;
+        height: 12vh;
+        padding: 3vh;
+        padding-right: 0;
+        width: 12vh;
+        z-index: 2;
+        float: right;
+    }
+
+    li.img {
+        display: none;
+    }
+
+    header li {
+        padding: 6vw;
+        display: block;
+        margin:-5vw;
+        background-color:rgb(3, 9, 47);
+    }
+    
+  }
+  

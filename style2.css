@@ -1,0 +1,142 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    background-color: rgb(9, 0, 53);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/**no changed **/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    gap: 5%;
+}
+
+/** homepage **/
+/**no changed **/
+#home-container {
+    flex-direction: column;
+}
+
+/**no changed **/
+#name {
+    background-color: rgb(149, 66, 66);
+    width: 70%;
+    height: 60%;
+}
+/**no changed **/
+.contains-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/**no changed **/
+.button {
+    background-color: rgb(112, 112, 213);
+    width: 10%;
+    height: 15%;
+}
+/**no changed **/
+.home-gone {
+    animation: moveOutLeft 2s ease-in-out 1; 
+}
+
+/** navigation **/
+/**YES changed **/
+#nav-container {
+    flex-direction: column;
+    gap: 1vw;
+    transform: 100vw;
+    width: 100vw;
+    height: 100vh;
+}
+/** not changed **/
+.nav-item {
+    gap: 2%;
+    width: 80vw;
+    height: 100%;
+}
+
+.flower a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+/**YES changed **/
+.up {
+    transform: translateX(100vh);
+}
+/**YES changed **/
+.down {
+    transform: translateX(-200vh);
+}
+
+/**YES changed **/
+.up-appear {
+    transform: translateX(0vh);
+    margin-left: auto;
+    transition: all 2s;
+}
+/**YES changed **/
+
+.down-appear {
+    margin-right: auto;
+    transform: translateX(0vh);
+    transition: all 2s;
+}
+/**YES changed **/
+.flower {
+    height: 90%;
+    width: 30%;
+    background-color:rgb(255, 255, 255);
+    position: relative;
+}
+/**not changed **/
+.flower:hover {
+    cursor: pointer;
+    transform: rotate(45deg);
+    transition: all 1s;
+}
+/**YES changed **/
+.stem {
+    height: 90%;
+    width: 70%;
+    background-color:rgb(0, 150, 70);
+}
+/**not changed **/
+.nav-arrive {
+    animation: moveInRight 2s ease-in-out 1; 
+}
+
+/** animations **/
+/**not changed **/
+@keyframes moveOutLeft {
+    0% {
+        transform: translatex(0vw);
+    }
+	100% {
+		transform: translatex(-100vw);
+	}
+}
+/**not changed **/
+@keyframes moveInRight {
+    0% {
+        transform: translatex(100vw);
+    }
+    
+	100% {
+		transform: translatex(0vw);
+	}
+}
+/**not changed **/
+@media screen and (max-width: 900px) {
+     
+}

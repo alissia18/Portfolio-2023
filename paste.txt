@@ -1,0 +1,10 @@
+credits:
+
+collapsible tutorial:
+https://www.digitalocean.com/community/tutorials/css-collapsible
+
+card flip:
+https://www.w3schools.com/howto/howto_css_flip_card.asp
+
+mobile menu icon:
+https://www.w3schools.com/howto/howto_css_menu_icon.asp
