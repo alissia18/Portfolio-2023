@@ -9,12 +9,18 @@
         @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
     </style>
     <script src="art.js"></script>
+    <script src="mobile.js"></script>
     <title>Art</title>
 </head>
 <body id="art-body">
     <header>
         <img src="images/portfolio-name.svg">
-        <nav>
+        <div class="menu-container" onclick="menuActivate(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <nav id="navigation">
             <ul>
                 <li><a class="active-page" href="art.html">art</a></li>
                 <li><img src="images/flowers-01.svg"></li>
@@ -80,7 +86,23 @@
             </div>
 
         </div>
+
         
+        
+    </div>
+
+    <div class="row">
+        <div class="imagecard landscape">
+            <div class="imagecard-inner">
+                <div class="imagecard-front">
+                    <img src="images/illustration/Musky-Mug.png">
+                </div>
+                <div class="imagecard-back">
+                    <h1>testing landscape</h1>
+                    <p>June 2021, environment concept</p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

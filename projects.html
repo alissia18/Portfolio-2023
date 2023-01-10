@@ -8,12 +8,18 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
     </style>
+    <script src="mobile.js"></script>
     <title>Projects</title>
 </head>
 <body id="projects-body">
     <header>
         <img src="images/portfolio-name.svg">
-        <nav>
+        <div class="menu-container" onclick="menuActivate(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <nav id="navigation">
             <ul>
                 <li><a href="art.html">art</a></li>
                 <li><img src="images/flowers-01.svg"></li>
@@ -22,7 +28,6 @@
                 <li><a href="about.html">about</a></li>
             </ul>
         </nav>
-
     </header>
     <div id="projects-container">
         <div class="project-section" id="first">

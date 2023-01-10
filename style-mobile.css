@@ -11,6 +11,7 @@ body {
     font-family: 'Patrick Hand';
     background-repeat: no-repeat;
     width: 100vw;
+    background-size: cover;
 }
 
 html,body {
@@ -428,8 +429,8 @@ iframe {
 /** about **/
 
 #about-container {
-    flex-direction: row;
-    padding: 5vw;
+    flex-direction: column;
+   padding: 5vw;
 }
 #about-img {
     margin-top: 20vh;
@@ -456,7 +457,6 @@ iframe {
     height: 70vh;
     width: 50vw;
     padding: 6vh;
-    border-radius: 2vh;
 }
 #about-blurb span {
     font-family: 'Something Wild';
@@ -464,7 +464,7 @@ iframe {
 }
 #about-text {
     max-width: 50vw;
-    font-size: 2.4vw;
+    font-size: 3vw;
 }
 /** animations **/
 
@@ -560,30 +560,6 @@ iframe {
         display: block;
         margin:-5vw;
         background-color:rgb(3, 9, 47);
-    }
-
-    #about-container {
-        flex-direction: column;
-    }
-
-    #about-blurb {
-        height: 60vh;
-        width: 80vw;
-        
-    }
-
-    #about-text{
-        font-size: 2.5vh;
-    }
-
-    #about-blurb span {
-        font-size: 8vh;
-    }
-
-    #about-img {
-        width: 100vw;
-        height: 80vh;
-        margin-top: 10vh;
     }
     
   }
